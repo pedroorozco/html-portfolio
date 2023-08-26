@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+
+    <form id="survey-form">
+      <label id="name-label">Name <input type="text" id="name" placeholder="Enter your name" required></label>
+      <label id="email-label">Email<input type="email" id="email" placeholder="Enter your Email" required></label>
+      <label id="number-label">Age (optional)<input id="number" type="number" min="13" max="100" placeholder="Age"></label>
+
+      <label for="dropdown" name="dropdown">Which option best describes your current role?
+        <select id="dropdown">
+          <option>Select current role</option>
+          <option>Student</option>
+          <option>Full Time Job</option>
+          <option>Full Time Learner</option>
+          <option>Prefer not to say</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <label for="recommend" class="recommend">Would you recommend freeCodeCamp to a friend?</label>
+        <label for="yes"><input type="radio" name="recommend" value="yes" class="inline"/>Definitely</label>
+        <label for="maybe"><input type="radio" name="recommend" value="maybe" class="inline"/>Maybe</label>
+        <label for="no"><input type="radio" name="recommend" value="no" class="inline"/>Not Sure</label>
+
+      <label for="second-dropdown" name="second-dropdown">What is your favorite feature of freeCodeCamp?
+        <select id="second-dropdown">
+          <option>Select an option</option>
+          <option>Challenges</option>
+          <option>Projects</option>
+          <option>Community</option>
+          <option>Open Source</option>
+        </select>
+      </label>
+
+      <label for="improvement">What would you like to see improved? (Check all that apply)
+        <label for="front-end">
+          <input id="front-end" type="checkbox" name="front-end" value="front-end" class="inline">Front-end Projects</label>
+
+        <label for="back-end">
+          <input id="back-end" type="checkbox" name="back-end" value="back-end" class="inline">Back-end Projects</label>
+
+        <label for="data-visualization">
+          <input id="data-visualization" type="checkbox" name="data-visualization" value="data-visualization" class="inline">Data Visualization</label>
+
+        <label for="challenges">
+          <input id="challenges" type="checkbox" name="challenges" value="challenges" class="inline">Challenges</label>
+
+        <label for="open-source">
+          <input id="open-source" type="checkbox" name="open-source" value="open-source" class="inline">Open Source Community</label>
+
+        <label for="help-rooms">
+          <input id="help-rooms" type="checkbox" name="help-rooms" value="help-rooms" class="inline">Gitter Help Rooms</label>
+
+        <label for="videos">
+          <input id="videos" type="checkbox" name="videos" value="videos" class="inline">Videos</label>
+
+        <label for="city-meetups">
+          <input id="city-meetups" type="checkbox" name="city-meetups" value="city-meetups" class="inline">City Meetups</label>
+
+        <label for="wiki">
+          <input id="wiki" type="checkbox" name="wiki" value="wiki" class="inline">Wiki</label>
+
+        <label for="forum">
+          <input id="forum" type="checkbox" name="forum" value="forum" class="inline">Forum</label>
+
+        <label for="additional">
+          <input id="additional" type="checkbox" name="additional" value="additional" class="inline">Additional</label>
+      </label>
+
+      <label for="comments">Any comments or suggestions?
+        <textarea rows="8" cols="65" placeholder="Enter your comment here..."></textarea>
+      </label>
+
+      <input type="submit" id="submit">
+    </form>
+  </body>
+</html>

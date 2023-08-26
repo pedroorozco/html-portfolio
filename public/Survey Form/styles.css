@@ -1,0 +1,77 @@
+body {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  background-image: linear-gradient( 100deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+p {
+  margin-top: -15px;
+  font-size: 20px;
+  font-style: italic;
+  color: rgb(211, 211, 211);
+  text-align: center;
+}
+
+h1 {
+  margin: 25px auto 25px auto;
+  text-align: center;
+  color: white;
+}
+
+form {
+  background-color: #0a0a23CC;
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 2.5em;
+  color: #ffffff;
+  max-width: 720px;
+}
+
+label {
+  display: block;
+  margin: 1em 0;
+}
+
+.recommend {
+  margin-bottom: -15px;
+}
+
+.inline {
+  width: 17px;
+  margin: -5px 1em 0 0;
+  vertical-align: middle;
+}
+
+input, select, textarea{
+  width: 100%;
+  min-height: 2.5em;
+  margin: 10px 0 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+input[type="radio"] {
+  margin-bottom: 2px;
+}
+
+input[type="checkbox"] {
+  margin-bottom: 0px;
+  margin-top: -10px;
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 1em auto;
+  font-size: 1.1rem;
+  background-color: rgb(0, 150, 0);
+  border-color: green;
+  color: white;
+  min-width: 300px;
+}

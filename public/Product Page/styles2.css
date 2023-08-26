@@ -1,0 +1,364 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+}
+  
+*,
+::before,
+::after {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+#container {
+max-width: 1000px;
+width: 100%;
+margin: 0 auto;
+}
+
+body {
+font-family: Helvetica, sans-serif;
+color: linen;
+background-color: rgb(20, 30, 40);
+}
+
+main {
+margin-top: 8em;
+}
+
+header img {
+width: 100px;
+object-fit: contain;
+}
+
+#nav-bar {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+position: fixed;
+width: 100%;
+top: 0;
+background-color: #ddd;
+padding: 10px;
+padding-bottom: 20px;
+}
+
+.nav-links {
+display: flex;
+list-style-type: none;
+}
+
+.nav-links a {
+text-decoration: none;
+color: black;
+padding: 0 10px;
+}
+
+.logo {
+display: flex;
+align-items: center;
+}
+
+.store-name {
+font-size: 25px;
+color: black;
+margin-left: -10px;
+font-weight: bold;
+}
+
+#sign-up {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+height: 150px;
+}
+
+#sign-up p {
+font-size: 1.7rem;
+margin-bottom: 10px;
+}
+
+#sign-up input[type="submit"] {
+max-width: 150px;
+width: 100%;
+height: 30px;
+margin: 15px 0;
+background-color: red;
+color: yellow;
+border: 1px solid #fff;
+}
+
+#sign-up input[type="email"] {
+max-width: 275px;
+width: 100%;
+padding: 5px;
+}
+
+hr {
+width: 100%;
+margin: 1.5rem 0;
+border: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+#about {
+margin: 0 auto;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+#about h2 {
+font-size: 3em;
+margin-bottom: 15px;
+}
+
+#about-lego {
+margin-bottom: 15px;
+}
+
+
+#toy-set {
+text-align: center;
+font-size: 2.5em;
+margin: 10px;
+}
+
+iframe {
+display: block;
+margin: 0 auto;
+width: 80%;
+}
+
+.toy-features {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 10px;
+max-width: 1400px;
+margin: 0 auto;
+padding: 20px 10px;
+}
+
+.toy-features img {
+width: 100%;
+max-width: 560px;
+height: auto;
+object-fit: cover;
+border-radius: 10px;
+}
+
+.toy-features h4 {
+padding: 0px;
+font-size: 1.5rem;
+}
+
+#feature {
+margin-top: 0px;
+}
+
+#pricing {
+margin-top: 40px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+
+}
+
+.price {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+border: 1px solid #fff;
+margin: 15px;
+}
+
+.price h5 {
+background-color: #ddd;
+color: black;
+width: 100%;
+padding: 15px 0;
+}
+
+.price h4 {
+margin-top: 10px;
+}
+
+.price ol {
+margin: 15px 0;
+}
+
+.price li {
+list-style-type: none;
+padding: 5px 0;
+}
+
+.btn {
+border: 0;
+background-color: #ddd;
+font-weight: 700;
+margin: 10px;
+padding: 5px 20px;
+cursor: pointer;
+}
+
+a {
+text-decoration: none;
+color: linen;
+}
+
+.social-icons {
+display: flex;
+font-size: 1.5rem;
+justify-content: flex-end;
+align-items: space-around;
+}
+
+footer {
+margin-top: 30px;
+padding: 20px;
+background-color: gray;
+}
+
+footer > span {
+margin-top: 5px;
+display: flex;
+justify-content: flex-end;
+}
+
+@media only screen and (min-width: 800px) {
+#nav-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+h4 {
+    font-size: 1.5em;
+    margin-top: 35px;
+    text-align: center;
+}
+
+/*
+.toy-features {
+    display: grid;
+    grid-template-rows: 450px;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 1rem;
+    
+}
+
+.toy-features img {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    width: 100%;
+    height: auto;
+}
+
+.toy-features p, h4 {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+*/
+
+.toy-features {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, min-content);
+    gap: 2rem;
+    place-items: center;
+    text-align: center;
+    border-bottom: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+.toy-features h4, .feature {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    
+}
+
+.toy-features h4 {
+    margin-top: -50px;
+}
+.feature {
+    position: relative;
+    top: -220px;
+    
+}
+
+#about {
+    border-bottom: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+#at-te-set, #republic-tank-set, #at-at-set {
+    margin-top: 35px;
+}
+
+}
+
+@media only screen and (max-width: 600px) {
+#nav-bar {
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 5rem;
+}
+
+#header-feature {
+    text-align: center;
+    margin-top: 15px;
+}
+
+h3,
+h4,
+h5 {
+    font-size: 1.8rem;
+}
+
+#pricing {
+    flex-direction: column;
+}
+
+.price li {
+    font-size: 1.5rem;
+}
+
+.btn {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.social-icons {
+    font-size: 2rem;
+}
+
+span {
+    font-size: 1.5rem;
+}
+
+.feature, p {
+    font-size: 1.5rem;
+    text-align: center;
+} 
+}
+
+@media only screen and (600px < width < 800px) {
+#header-feature {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+}
