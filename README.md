@@ -1,2 +1,2 @@
 # html-portfolio
-Simple Portfolio for Web Development
+Simple Portfolio for Web / Application Development
