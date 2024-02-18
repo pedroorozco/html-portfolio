@@ -12,10 +12,177 @@ margin: 0;
 box-sizing: border-box;
 }
 
+*[id] {
+    scroll-margin-top: 155px; /* Adjust this value as needed */
+}
+
+#container {
+max-width: 1000px;
+width: 100%;
+margin: 0 auto;
+}
+
 body {
 font-family: Helvetica, sans-serif;
 color: linen;
 background-color: rgb(20, 30, 40);
+}
+
+main {
+margin-top: 10em;
+}
+
+header img {
+width: 100px;
+object-fit: contain;
+}
+
+#nav-bar {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 1;
+background-color: #ddd;
+padding: 10px;
+padding-bottom: 20px;
+}
+
+.nav-links {
+display: flex;
+list-style-type: none;
+margin: 0px;
+}
+
+.nav-links a {
+text-decoration: none;
+color: black;
+padding: 14px 10px;
+float: left;
+font-size: 14px;
+text-align: center;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    display: none;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: red;
+    color: yellow;
+    border: 3px solid #fff;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    float: none;
+    color: black;
+    padding: 5px 5px;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+.logo {
+display: flex;
+align-items: center;
+}
+
+.store-name {
+font-size: 25px;
+color: black;
+margin-left: -10px;
+font-weight: bold;
+}
+
+#sign-up {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+height: 150px;
+}
+
+#sign-up p {
+font-size: 1.7rem;
+margin-bottom: 10px;
+}
+
+#sign-up input[type="submit"] {
+max-width: 150px;
+width: 100%;
+height: 30px;
+margin: 15px 0;
+background-color: red;
+color: yellow;
+border: 1px solid #fff;
+}
+
+#sign-up input[type="email"] {
+max-width: 275px;
+width: 100%;
+padding: 5px;
+}
+
+hr {
+width: 100%;
+margin: 1.5rem 0;
+border: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+#about {
+margin: 0 auto;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+#about h2 {
+font-size: 3em;
+margin-bottom: 15px;
+}
+
+#about-lego {
+margin-bottom: 15px;
+}
+
+
+#toy-set {
+text-align: center;
+font-size: 2.5em;
+margin: 10px;
+}
+
+iframe {
+display: block;
+margin: 0 auto;
+width: 80%;
 }
 
 .toy-features {
@@ -116,3 +283,129 @@ margin-top: 5px;
 display: flex;
 justify-content: flex-end;
 }
+
+@media only screen and (min-width: 800px) {
+#nav-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+h4 {
+    font-size: 1.5em;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.toy-features {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, min-content);
+    gap: 2rem;
+    place-items: center;
+    text-align: center;
+    border-bottom: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+.toy-features h4, .feature {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    
+}
+
+.toy-features h4 {
+    margin-top: -50px;
+}
+
+.feature {
+    position: relative;
+    top: -220px;
+    
+}
+
+#about {
+    border-bottom: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+#at-te-set, #republic-tank-set, #at-at-set {
+    margin-top: 35px;
+}
+
+}
+
+@media only screen and (max-width: 600px) {
+#nav-bar {
+    text-align: center;
+}
+
+.nav-links {
+    display: none;
+}
+
+.dropdown {
+    display: block;
+    margin-top: 10px;
+}
+
+#about {
+    border-bottom: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+#about h2 {
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+#about p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#header-feature {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#toy-set {
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.toy-features {
+    border-bottom: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+h3,
+h4,
+h5 {
+    font-size: 1.8rem;
+}
+
+#pricing {
+    flex-direction: column;
+}
+
+.price li {
+    font-size: 1.5rem;
+}
+
+.btn {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.social-icons {
+    font-size: 2rem;
+}
+
+span {
+    font-size: 1.5rem;
+}
+
+.feature, p {
+    font-size: 1.5rem;
+    text-align: center;
+} 
+}
+

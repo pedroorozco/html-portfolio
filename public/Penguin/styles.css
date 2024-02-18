@@ -11,31 +11,31 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .clock {
-    width: 300px;
-    height: 80px;
-    background-color: var(--penguin-picorna);
-    display: block;
-    position: fixed;
-    z-index: 5;
-    top: 345px;
-    left: 40%;
-    padding: 10px;
     text-align: center;
+    background-color: whitesmoke;
+    padding: 10px;
+    position: relative;
+    top: 420px;
+    z-index: 4;
 }
+
+.clock-box {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
 
 span {
-    width: 50%;
-    height: 50%;
     color: black;
     font-size: 2rem;
-    position: relative;
-}
-
-#todays {
-    margin-top: 20px; 
+    margin: 0 5px;
 }
 
 
@@ -47,7 +47,8 @@ span {
     position: absolute;
     transform: skew(0deg, 44deg);
     z-index: 2;
-    margin-top: 100px;
+    left: 0px;
+    margin-top: 250px;
 }
 
 .back-mountain {
@@ -58,7 +59,7 @@ position: absolute;
 z-index: 1;
 transform: rotate(45deg);
 left: 110px;
-top: 225px;
+top: 240px;
 }
 
 .sun {
@@ -190,16 +191,16 @@ left: 42%;
 }
 
 .shirt {
-font: bold 25px Helvetica, sans-serif;
-top: 165px;
-left: 127.5px;
+font: bold 20px Helvetica, sans-serif;
+top: 146px;
+left: 128px;
 z-index: 1;
 color: #6a6969;
 }
 
 .shirt div {
 font-weight:  initial;
-top: 22.5px;
+top: 18px;
 left: 12px;
 }
 
@@ -294,15 +295,16 @@ width: 100vw;
 height: calc(100vh - 300px);
 background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
 z-index: 3;
-position: absolute;
+position: relative;
 margin-top: -58px;
 }
 
 @media only screen and (max-width:530px) {
     .clock {
         position: absolute;
-        left: 90px;
-        background-color: whitesmoke;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: -60px;
         
     }
 
@@ -324,5 +326,9 @@ margin-top: -58px;
 
     .left-mountain {
         background: linear-gradient(25deg, rgb(88, 150, 250), rgb(190, 255, 255));
+    }
+
+    .shirt {
+        top: 170px;
     }
 }

@@ -135,7 +135,7 @@ color: white;
 font-style: italic;
 color: white;
 opacity: 50%;
-font-size: 1.5rem;
+font-size: 1.2rem;
 }
 
 .contact-links {
@@ -145,6 +145,7 @@ flex-wrap: wrap;
 width: 100%;
 margin-top: 3rem;
 }
+
 #contact a {
 text-decoration: none;
 color: white;

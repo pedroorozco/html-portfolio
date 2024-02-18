@@ -6,47 +6,62 @@
     <title>Product-Landing-Page</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
     <link rel="stylesheet" href="styles.css" />
+    <script src="./search.js"></script>
   </head>
   <body>
     <header id="header">
-      <a href="https://www.lego.com/en-us/themes/star-wars" target="_blank">
-        <img src="https://i.ibb.co/K6gQrrp/logo.png>" alt="Lego Logo" id="header-img" height="100">
-      </a>
-      <h1>Lego Store</h1>
+      
       <nav id="nav-bar">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#at-te-set" class="nav-link">AT-TE Set</a>
-        <a href="#republic-tank-set" class="nav-link">Republic Fighter Tank Set</a>
-        <a href="#at-at-set" class="nav-link">AT-AT Set</a>
-        <a href="#pricing" class="nav-link">Pricing</a>
+        <div class="logo">
+          <a href="https://www.lego.com/en-us/themes/star-wars" target="_blank">
+            <img src="https://i.ibb.co/K6gQrrp/logo.png>" alt="Lego Logo" id="header-img">
+          </a>
+        <span class="store-name">Lego Store</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#sign-up" class="nav-link">Sign Up</a></li>
+          <li><a href="#at-te-set" class="nav-link">AT-TE Set</a></li>
+          <li><a href="#republic-tank-set" class="nav-link">Republic Fighter Tank Set</a></li>
+          <li><a href="#at-at-set" class="nav-link">AT-AT Set</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        </ul>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="toggleDropdown()">Dropdown</button>
+          <div class="dropdown-content" id="myDropdown">
+              <a href="#about" class="nav-link">About</a>
+              <a href="#sign-up" class="nav-link">Sign Up</a>
+              <a href="#at-te-set" class="nav-link">AT-TE Set</a>
+              <a href="#republic-tank-set" class="nav-link">Republic Fighter Tank Set</a>
+              <a href="#at-at-set" class="nav-link">AT-AT Set</a>
+              <a href="#pricing" class="nav-link">Pricing</a>           
+          </div>
+        </div>
       </nav>
     </header>
     <main>
       <section id="sign-up">
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-        <p>Sign up to LEGO Shop Emails</p>
-        <input type="email" id="email" name="email" placeholder="Enter your email address">
-        <input type="submit" id="submit" value="Get Started">
+        <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+          <p>Sign up to LEGO Shop Emails</p>
+          <input type="email" id="email" name="email" placeholder="Enter your email address">
+          <input type="submit" id="submit" value="Get Started">
         </form>
       </section>
 
-      <hr>
-
       <div id="container">
+        <hr>
         <section id="about">
           <h2>Feel the Force of LEGO Star Wars Toys</h2>
-          <p id="about">LEGO Star Wars buildable construction toys and mini-figures are inspired by classic Star Wars comic books and action-packed movies from the Skywalker Saga and beyond.</p>
-          <p id="about-p2">Below you will see a number of products we currently have in stock ranging from a Republic Fighter Tank, AT-TE Walker and even the 40th anniversary set of one of our biggest sets ever, the AT-AT Walker!</p>
+          <p id="about-lego">LEGO Star Wars buildable construction toys and mini-figures are inspired by classic Star Wars comic books and action-packed movies from the Skywalker Saga and beyond.</p>
+          <p id="about-lego">Below you will see a number of products we currently have in stock ranging from a Republic Fighter Tank, AT-TE Walker and even the 40th anniversary set of one of our biggest sets ever, the AT-AT Walker!</p>
         </section>
 
         <section id="at-te-set">
-          <h3 id="at-te-set">The AT-TE Walker Set</h3>
-          <p class="about-set"> </p>
-          <iframe width="560px" height="350px" src="https://www.youtube.com/embed/pamlZWMlGLQ" id="video" title="AT-TE Set Video Review"></iframe>
+          <h3 id="toy-set">The AT-TE Walker Set</h3>
+          <iframe height="450px" src="https://www.youtube.com/embed/pamlZWMlGLQ" id="video" title="AT-TE Set Video Review"></iframe>
 
+          <h4 id="header-feature"> The AT-TE Walker Features</h4>
           <div class="toy-features">
-            <h4> The AT-TE Walker </h4>
-            <p class="about-set"> </p>
             <img src="https://i.ibb.co/Fqv6Djs/at-te-pic1.webp" alt="at-te-feature" height="100px">
             <h4>Easy-access cockpit and cabins</h4>
             <p class="feature">There is space for up to 7 LEGO mini-figures inside</p>
@@ -60,11 +75,10 @@
         </section>
 
         <section id="republic-tank-set">
-          <h3 id="republic-tank-set">The Republic Fighter Tank Set</h3>
-          <p class="about-set"> </p>
-          <iframe width="560px" height="350px" src="https://www.youtube.com/embed/646ZzLMEpHs" id="video" title="Republic Fighter Tank Set Video Review"></iframe>
+          <h3 id="toy-set">The Republic Fighter Tank Set</h3>
+          <iframe height="450px" src="https://www.youtube.com/embed/646ZzLMEpHs" id="video" title="Republic Fighter Tank Set Video Review"></iframe>
+          <h4 id="header-feature"> The Republic Fighter Tank Features</h4>
           <div class="toy-features">
-            <h4> The Republic Fighter Tank Features</h4>
             <img src="https://i.ibb.co/VVrtZ55/tank-pic1.webp" height="100px">
             <h4>Republic Fighter Tank</h4>
             <p class="feature">Cool hover effect and 2 elevating spring-loaded shooters.</p>
@@ -78,12 +92,11 @@
         </section>
 
         <section id="at-at-set">
-          <h3 id="at-at-set">The AT-AT Walker Set</h3>
-          <p class="about-set"> </p>
-          <iframe width="560px" height="350px" src="https://www.youtube.com/embed/f-NtWZ9EPq8" id="video" title="AT-AT Set Video Review"></iframe>
+          <h3 id="toy-set">The AT-AT Walker Set</h3>
+          <iframe height="450px" src="https://www.youtube.com/embed/f-NtWZ9EPq8" id="video" title="AT-AT Set Video Review"></iframe>
+
+          <h4 id="header-feature"> The AT-AT Walker Features</h4>
           <div class="toy-features">
-            <h4> The AT-AT Walker Features</h4>
-            <p class="about-set"> </p>
             <img src="https://i.ibb.co/jGH03sn/at-at-pic1.webp" alt="at-at-feature" height="100px">
             <h4>Speeder bike</h4>
             <p class="feature">The bike inside the AT-AT adds to the action play options</p>
