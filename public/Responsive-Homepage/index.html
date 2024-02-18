@@ -7,19 +7,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
-        <img src="./images/alarado-icon-homepage.svg" alt="Logo Icon">
-        <div class="navbar">           
+        <img src="./images/alarado-icon-homepage.svg" alt="Logo Icon" id="logo">
+        <img class="logo logo-light" src="images/alarado-icon-homepage-light.svg" alt="Logo Icon" id="logo-light">
+        <div class="navbar">       
             <ul class="links">
                 <li>About us</li>
                 <li>Product</li>
                 <li>Resources</li>
                 <li>Contact</li>
             </ul>
-            <button id="dark-mode">
+            <button id="dark-mode" onclick="darkMode()">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFF" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15 4C15.292 4 15.438 4 15.5781 4.04183C16.192 4.22522 16.4775 4.93111 16.1637 5.48976C16.0921 5.61719 15.8744 5.82779 15.4389 6.249C13.935 7.70352 13 9.74257 13 12C13 14.2574 13.935 16.2965 15.4389 17.751C15.8744 18.1722 16.0921 18.3828 16.1637 18.5102C16.4775 19.0689 16.192 19.7748 15.5781 19.9582C15.438 20 15.292 20 15 20V20C10.5817 20 7 16.4183 7 12C7 7.58172 10.5817 4 15 4V4Z" fill="#fff"/>
                 </svg>
@@ -35,6 +39,48 @@
                     <path d="M5.63608 5.63559L7.05029 7.0498" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
                 </svg>
             </button>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" aria-label="Fifth navbar example">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+            
+                  <div class="collapse navbar-collapse" id="navbarsExample05">
+                    <ul class="links navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link">Product</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link">Resources</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                        <button id="dark-mode-collapsed" onclick="darkMode()">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFF" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 4C15.292 4 15.438 4 15.5781 4.04183C16.192 4.22522 16.4775 4.93111 16.1637 5.48976C16.0921 5.61719 15.8744 5.82779 15.4389 6.249C13.935 7.70352 13 9.74257 13 12C13 14.2574 13.935 16.2965 15.4389 17.751C15.8744 18.1722 16.0921 18.3828 16.1637 18.5102C16.4775 19.0689 16.192 19.7748 15.5781 19.9582C15.438 20 15.292 20 15 20V20C10.5817 20 7 16.4183 7 12C7 7.58172 10.5817 4 15 4V4Z" fill="#fff"/>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="4" fill="#fff"/>
+                                <path d="M12 5V3" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M12 21V19" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M16.9498 7.04996L18.364 5.63574" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M5.63608 18.3644L7.05029 16.9502" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M19 12L21 12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M3 12L5 12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M16.9498 16.95L18.364 18.3643" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M5.63608 5.63559L7.05029 7.0498" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </nav>
         </div>
     </div>
     <div class="container-main">
