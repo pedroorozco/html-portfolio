@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Today</title>
+    <title>Draven ChatBot</title>
     <link href="./styles.css" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>    
-    
     <div class="form-container">
         <div class="image-container">
             <img src="./images/logo.jpg" alt="Image of Draven">
             <div class="left-info">
-                <p>Become Best Draven World</p>
+                <p>Talk To Draven Bot</p>
             </div>  
         </div>
         <div class="right-info">
-            <form method="post" action="https://register-demo.freecodecamp.org">
+            <form method="post" action="#">
                 <input type="text" id="email" placeholder="Email" required>
-                <input type="password" id="password" placeholder="Create Password">
-                <input type="password" id="confirm-password" placeholder="Confirm Password">
-                <button class="signup-button">Signup</button>
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                <button class="signup-button" onclick="login(event)">Login</button>
             </form>
         </div>
-
+        <div class="chatbot-container" id="chatbotContainer">
+            <div class="chatbot">
+                <h2>Welcome to the League of Draven</h2>
+                <div id="chat"></div>
+                <input type="text" id="userInput" placeholder="Send a message..." onkeypress="sendWithEnter(event)">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>

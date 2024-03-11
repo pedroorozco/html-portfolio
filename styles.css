@@ -92,7 +92,7 @@ padding: 20px 10px;
 .project-tile {
 width: 100%;
 max-width: 500px;
-height: 400px;
+height: 425px;
 border-radius: 10px;
 background: #303841;
 text-decoration: none;
@@ -111,6 +111,15 @@ border-radius: 10px 10px 0px 0px;
 padding: 2rem 0.5rem;
 font-size: 2rem;
 
+}
+
+#big-text {
+  padding: .5rem .5rem;
+}
+
+#small-text {
+  font-size: .8rem;
+  padding: 5px 0 10px 0;
 }
 
 #contact {
@@ -161,4 +170,10 @@ footer {
 border-top: 5px solid #be3144;
 height: 100px;
 background-color: #303841;
+}
+
+@media only screen and (max-width: 450px) {
+  .project-tile p {
+    font-size: 1.5rem;
+  }
 }
